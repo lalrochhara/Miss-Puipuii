@@ -50,6 +50,7 @@
       },
       "CASH_API_KEY": {
          "description": "Required for currency converter",
+         "required": false,
          "value": "-xyz"
       },
       "TIME_API_KEY": {
