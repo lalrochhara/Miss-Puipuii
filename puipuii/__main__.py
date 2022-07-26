@@ -28,7 +28,7 @@ from puipuii.modules.translations.strings import tld
 PM_START_TEXT = """
 
 
-🙋Hello {}, My Name is {} !
+🙋Hello {}, My Name is {} [!]{https://telegra.ph/file/5dfdcf245d5c12615a14a.jpg}
 
 I'm a powerful group management bot 🤖
 
@@ -148,17 +148,17 @@ def start(bot: Bot, update: Update, args: List[str]):
             chat = update.effective_chat  # type: Optional[Chat]
             text = PM_START_TEXT
     
-            keyboard = [[InlineKeyboardButton(text=tld(chat.id, "Add Me To Your Group ♥️"), url="t.me/PuipuiiBot?startgroup=true")]]
+            keyboard = [[InlineKeyboardButton(text=tld(chat.id, "Add Me To Your Group"), url="t.me/PuipuiiBot?startgroup=true")]]
 
             keyboard += [[InlineKeyboardButton(text=tld(chat.id, "Updates"), url="https://t.me/PuipuiiUpdates"), InlineKeyboardButton(text=tld(chat.id, "🌍 Support Chat 🌍"), url="https://t.me/PuipuiiSupports")]]
             
-            keyboard += [[InlineKeyboardButton(text="My Super Commands ⚙️", callback_data="help_back")]]
+            keyboard += [[InlineKeyboardButton(text="My Super Commands", callback_data="help_back")]]
             
             update.effective_message.reply_text(PM_START_TEXT.format(escape_markdown(first_name), bot.first_name), reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=False, parse_mode=ParseMode.MARKDOWN)
 
 
     else:
-        update.effective_message.reply_text("Yes, What Happened?🤧 If You Need Help Type /help")
+        update.effective_message.reply_text("Yes, What Happened? If You Need Help Type /help")
 
 
 def send_start(bot, update):
