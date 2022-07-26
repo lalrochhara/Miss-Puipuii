@@ -1,0 +1,16 @@
+puipuii/config.py
+puipuii/*.session
+puipuii/*.session-journal
+puipuii/config.ini
+*.pyc
+.idea/
+.project
+.pydevproject
+.directory
+.vscode
+puipuii/modules/helper_funcs/temp.txt
+puipuii/elevated_users.json
+start-3.6.bat
+*.session
+kangsticker.png
+venv
